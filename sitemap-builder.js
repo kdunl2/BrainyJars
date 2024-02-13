@@ -33,6 +33,6 @@ class UniqueSitemap extends Sitemap {
 
 (
     new UniqueSitemap(router())
-        .build('https://brainyjars.art')
+        .build('https://example.com')
         .save('./public/sitemap-index.xml')
 );
