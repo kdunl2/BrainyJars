@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import theme from "theme";
 import { Theme, Text, Button, Section, Box } from "@quarkly/widgets";
 import { Helmet } from "react-helmet";
@@ -6,6 +6,71 @@ import { GlobalQuarklyPageStyles } from "global-page-styles";
 import { RawHtml, Override } from "@quarkly/components";
 import * as Components from "components";
 export default (() => {
+
+	   function toggleWhiteListContent(){
+		debugger
+		const whiteListTextDiv = document.querySelector(".whiteListContent");
+		if (whiteListTextDiv) {
+			if (whiteListTextDiv) {
+			  // Ensure the transition effect is applied to the div
+			  whiteListTextDiv.style.transition = "all 0.5s ease-in-out";
+		  
+			  // Check the current display style and toggle it
+			  if (whiteListTextDiv.style.display === "block") {
+				whiteListTextDiv.style.height = "0"; // Adjust as needed for hiding
+				setTimeout(() => { whiteListTextDiv.style.display = "none"; }, 500); // Ensure display:none is applied after the transition
+			  } else {
+				whiteListTextDiv.style.display = "block";
+				setTimeout(() => { whiteListTextDiv.style.height = "100%"; }, 0); // Delay height adjustment to allow for transition
+			  }
+			}
+		}
+	  };
+
+	  function getWhitelist(){
+
+				// Query for the div with the class 'section'
+				var sectionDiv = document.querySelector(".sections");
+				if (sectionDiv) {
+				  // Set the display of the section div to block
+				  sectionDiv.style.display = "block";
+				  const sectionCompleteButton = document.querySelector(".sectionComplete");
+				  if (sectionCompleteButton) {
+					sectionCompleteButton.disabled = true;
+				  }
+				}
+			  
+	  }
+
+	  		// Function to check if all modules are complete
+		function checkAllModulesComplete() {
+			// Query all module buttons
+			const modules = document.querySelectorAll(".module");
+			// Check if every module has the 'complete' class
+			const allComplete = Array.from(modules).every(module => module.classList.contains("complete"));
+			debugger
+			// If all modules are complete, enable the sectionComplete button
+			if (allComplete) {
+		  var completedAllElement = document.querySelector(".completedAll");
+		  if (completedAllElement) {
+			  completedAllElement.innerText = "";
+		  }
+		  
+			  const sectionCompleteButton = document.querySelector(".sectionComplete");
+			  if (sectionCompleteButton) {
+				sectionCompleteButton.disabled = false;
+			  }
+			}
+		  }
+
+		  function moduleClick(){
+			// Set the background to light green and add 'complete' class
+			this.style.backgroundColor = "lightgreen";
+			this.classList.add("complete");
+			// Check if all modules are complete
+			checkAllModulesComplete();
+		  }
+
 	return <Theme theme={theme}>
 		<GlobalQuarklyPageStyles pageUrl={"about"} />
 		<Helmet>
@@ -45,6 +110,7 @@ export default (() => {
 						border-radius="15px"
 						type="button"
 						className="module"
+						
 					>
 						What are BrainyJar NFT's
 					</Override>
@@ -70,7 +136,7 @@ export default (() => {
 						What is the Knowledge Jar
 					</Override>
 					<Text margin="0px 0px 0px 0px" font="80px --fontFamily-googleBungeeShade" color="--red" text-align="center">
-						4134 NFTs
+						Discover New Projects
 					</Text>
 					<Text margin="10px 10px 10px 10px" font="20px --fontFamily-googleOswald">
 						Collection of 4134 NFT's minting on the Solona Ecosytstem. Each NFT will act as a key to our KnowledgeNFT Platform as well as generate crypto rewards for holders.
@@ -91,7 +157,7 @@ export default (() => {
 						Benefits & Rewards
 					</Override>
 					<Text margin="0px 0px 0px 0px" font="80px --fontFamily-googleBungeeShade" color="--red" text-align="center">
-						4134 NFTs
+						Earn Crypto from NFT's
 					</Text>
 					<Text margin="10px 10px 10px 10px" font="20px --fontFamily-googleOswald">
 						Collection of 4134 NFT's minting on the Solona Ecosytstem. Each NFT will act as a key to our KnowledgeNFT Platform as well as generate crypto rewards for holders.
@@ -200,6 +266,7 @@ export default (() => {
 						color="--dark"
 						font="normal 500 22px/1.5 --fontFamily-googleOswald"
 						border-radius="15px"
+						onClick={toggleWhiteListContent}
 					>
 						BrainyJars NFT{" "}
 					</Button>
@@ -236,20 +303,17 @@ export default (() => {
 								color="--green"
 								font="normal 500 19px/1.5 --fontFamily-googleOswald"
 								className="getWhitelist"
+								onClick={getWhitelist}
 							>
 								Get Whitlisted
 							</Button>
+							
 						</Box>
 					</Box>
 				</Section>
 			</Section>
 		</Section>
 		<Components.Social />
-		<RawHtml>
-			<script place={"endOfHead"} rawKey={"65caaca2aced8fcc8306120d"} />
-			<script place={"endOfHead"} rawKey={"65cabcb502d7b4b3c0c01dae"}>
-				{"document.addEventListener('DOMContentLoaded', function() {\ndocument.querySelector(\".whiteListButton\").addEventListener('click', function() {\n  var whiteListTextDiv = document.querySelector(\".whiteListContent\");\n  if (whiteListTextDiv) {\n    // Ensure the transition effect is applied to the div\n    whiteListTextDiv.style.transition = \"all 0.5s ease-in-out\";\n\n    // Check the current display style and toggle it\n    if (whiteListTextDiv.style.display === \"block\") {\n      whiteListTextDiv.style.height = \"0\"; // Adjust as needed for hiding\n      setTimeout(() => { whiteListTextDiv.style.display = \"none\"; }, 500); // Ensure display:none is applied after the transition\n    } else {\n      whiteListTextDiv.style.display = \"block\";\n      setTimeout(() => { whiteListTextDiv.style.height = \"100%\"; }, 0); // Delay height adjustment to allow for transition\n    }\n  }\n});\n\n// New event listener for the getWhitelist button\ndocument.querySelector(\".getWhitelist\").addEventListener('click', function() {\n  // Query for the div with the class 'section'\n  var sectionDiv = document.querySelector(\".sections\");\n  if (sectionDiv) {\n    // Set the display of the section div to block\n    sectionDiv.style.display = \"block\";\n    const sectionCompleteButton = document.querySelector(\".sectionComplete\");\n    if (sectionCompleteButton) {\n      sectionCompleteButton.disabled = true;\n    }\n  }\n});\n\n// Function to check if all modules are complete\nfunction checkAllModulesComplete() {\n  // Query all module buttons\n  const modules = document.querySelectorAll(\".module\");\n  // Check if every module has the 'complete' class\n  const allComplete = Array.from(modules).every(module => module.classList.contains(\"complete\"));\n  debugger\n  // If all modules are complete, enable the sectionComplete button\n  if (allComplete) {\nvar completedAllElement = document.querySelector(\".completedAll\");\nif (completedAllElement) {\n    completedAllElement.innerText = \"\";\n}\n\n    const sectionCompleteButton = document.querySelector(\".sectionComplete\");\n    if (sectionCompleteButton) {\n      sectionCompleteButton.disabled = false;\n    }\n  }\n}\n\n// Attach event listeners to each module button\ndocument.querySelectorAll(\".module\").forEach(moduleButton => {\n  moduleButton.addEventListener('click', function() {\n    // Set the background to light green and add 'complete' class\n    this.style.backgroundColor = \"lightgreen\";\n    this.classList.add(\"complete\");\n    \n    // Check if all modules are complete\n    checkAllModulesComplete();\n  });\n});\n});"}
-			</script>
-		</RawHtml>
+
 	</Theme>;
 });
