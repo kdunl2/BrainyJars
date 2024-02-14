@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import theme from "theme";
 import { Theme, Text, Button, Section, Box } from "@quarkly/widgets";
 import { Helmet } from "react-helmet";
@@ -6,8 +6,7 @@ import { GlobalQuarklyPageStyles } from "global-page-styles";
 import { RawHtml, Override } from "@quarkly/components";
 import * as Components from "components";
 export default (() => {
-
-	   function toggleWhiteListContent(){
+	function toggleWhiteListContent(){
 		debugger
 		const whiteListTextDiv = document.querySelector(".whiteListContent");
 		if (whiteListTextDiv) {
@@ -70,7 +69,6 @@ export default (() => {
 			// Check if all modules are complete
 			checkAllModulesComplete();
 		  }
-
 	return <Theme theme={theme}>
 		<GlobalQuarklyPageStyles pageUrl={"about"} />
 		<Helmet>
@@ -110,7 +108,6 @@ export default (() => {
 						border-radius="15px"
 						type="button"
 						className="module"
-						
 					>
 						What are BrainyJar NFT's
 					</Override>
@@ -136,7 +133,7 @@ export default (() => {
 						What is the Knowledge Jar
 					</Override>
 					<Text margin="0px 0px 0px 0px" font="80px --fontFamily-googleBungeeShade" color="--red" text-align="center">
-						Discover New Projects
+						4134 NFTs
 					</Text>
 					<Text margin="10px 10px 10px 10px" font="20px --fontFamily-googleOswald">
 						Collection of 4134 NFT's minting on the Solona Ecosytstem. Each NFT will act as a key to our KnowledgeNFT Platform as well as generate crypto rewards for holders.
@@ -157,7 +154,7 @@ export default (() => {
 						Benefits & Rewards
 					</Override>
 					<Text margin="0px 0px 0px 0px" font="80px --fontFamily-googleBungeeShade" color="--red" text-align="center">
-						Earn Crypto from NFT's
+						4134 NFTs
 					</Text>
 					<Text margin="10px 10px 10px 10px" font="20px --fontFamily-googleOswald">
 						Collection of 4134 NFT's minting on the Solona Ecosytstem. Each NFT will act as a key to our KnowledgeNFT Platform as well as generate crypto rewards for holders.
@@ -307,13 +304,14 @@ export default (() => {
 							>
 								Get Whitlisted
 							</Button>
-							
 						</Box>
 					</Box>
 				</Section>
 			</Section>
 		</Section>
-		<Components.Social />
+		<Components.Social>
+			<Override slot="socialMedia" sm-align-items="flex-start" sm-margin="0px 0px 0px 0" />
+		</Components.Social>
 
 	</Theme>;
 });

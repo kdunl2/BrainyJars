@@ -22,9 +22,9 @@ const overrides = {
 	"socialMedia": {
 		"kind": "SocialMedia",
 		"props": {
-			"facebook": "https://www.facebook.com/",
-			"twitter": "https://twitter.com",
-			"youtube": "https://www.youtube.com/",
+			"facebook": "https://www.facebook.com/quarklyapp/",
+			"twitter": "https://twitter.com/quarklyapp",
+			"youtube": "https://www.youtube.com/channel/UCK5bXs2L0bbSMQ82BQ3hIkw",
 			"justify-content": "flex-end"
 		}
 	},

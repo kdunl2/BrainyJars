@@ -22,8 +22,14 @@ export default (() => {
 				Contact Us
 			</Override>
 		</Components.H>
-		<Section display="block" height="782px" background="#f71414">
-			<Override slot="SectionContent" flex-direction="row" height="800px" />
+		<Section
+			display="block"
+			height="782px"
+			background="#f71414"
+			sm-display="block"
+			sm-flex-direction="row"
+		>
+			<Override slot="SectionContent" flex-direction="row" height="800px" sm-flex-direction="column" />
 			<Image
 				src="https://uploads.quarkly.io/65c28f65009abe001f02fdd6/images/second.png?v=2024-02-06T21:56:51.849Z"
 				display="block"
@@ -34,6 +40,7 @@ export default (() => {
 				top="auto"
 				bottom="50%"
 				height="316.25572998046874px"
+				sm-display="none"
 				srcSet="https://smartuploads.quarkly.io/65c28f65009abe001f02fdd6/images/second.png?v=2024-02-06T21%3A56%3A51.849Z&quality=85&w=500 500w,https://smartuploads.quarkly.io/65c28f65009abe001f02fdd6/images/second.png?v=2024-02-06T21%3A56%3A51.849Z&quality=85&w=800 800w,https://smartuploads.quarkly.io/65c28f65009abe001f02fdd6/images/second.png?v=2024-02-06T21%3A56%3A51.849Z&quality=85&w=1080 1080w,https://smartuploads.quarkly.io/65c28f65009abe001f02fdd6/images/second.png?v=2024-02-06T21%3A56%3A51.849Z&quality=85&w=1600 1600w,https://smartuploads.quarkly.io/65c28f65009abe001f02fdd6/images/second.png?v=2024-02-06T21%3A56%3A51.849Z&quality=85&w=2000 2000w,https://smartuploads.quarkly.io/65c28f65009abe001f02fdd6/images/second.png?v=2024-02-06T21%3A56%3A51.849Z&quality=85&w=2600 2600w,https://smartuploads.quarkly.io/65c28f65009abe001f02fdd6/images/second.png?v=2024-02-06T21%3A56%3A51.849Z&quality=85&w=3200 3200w"
 				sizes="(max-width: 479px) 100vw,(max-width: 767px) 100vw,(max-width: 991px) 100vw,(max-width: 1199px) 100vw,100vw"
 			/>
@@ -44,19 +51,29 @@ export default (() => {
 				padding="24px 0vw 24px 0"
 				position="relative"
 				right="6vw"
+				sm-padding="50% 0vw 24px 0"
 			>
+				<Override
+					slot="SectionContent"
+					sm-flex-direction="column"
+					sm-align-content="center"
+					sm-justify-content="flex-start"
+					sm-margin="0px 18.6328px 0px 25%"
+					sm-height="fit-content"
+				/>
 				<Image
 					src="https://uploads.quarkly.io/65c28f65009abe001f02fdd6/images/Screenshot%202024-02-07%20at%202.43.51%20PM.png?v=2024-02-07T19:44:48.960Z"
 					display="block"
 					width="45vw"
 					height="50vh"
+					sm-height="fit-content"
 					srcSet="https://smartuploads.quarkly.io/65c28f65009abe001f02fdd6/images/Screenshot%202024-02-07%20at%202.43.51%20PM.png?v=2024-02-07T19%3A44%3A48.960Z&quality=85&w=500 500w,https://smartuploads.quarkly.io/65c28f65009abe001f02fdd6/images/Screenshot%202024-02-07%20at%202.43.51%20PM.png?v=2024-02-07T19%3A44%3A48.960Z&quality=85&w=800 800w,https://smartuploads.quarkly.io/65c28f65009abe001f02fdd6/images/Screenshot%202024-02-07%20at%202.43.51%20PM.png?v=2024-02-07T19%3A44%3A48.960Z&quality=85&w=1080 1080w,https://smartuploads.quarkly.io/65c28f65009abe001f02fdd6/images/Screenshot%202024-02-07%20at%202.43.51%20PM.png?v=2024-02-07T19%3A44%3A48.960Z&quality=85&w=1600 1600w,https://smartuploads.quarkly.io/65c28f65009abe001f02fdd6/images/Screenshot%202024-02-07%20at%202.43.51%20PM.png?v=2024-02-07T19%3A44%3A48.960Z&quality=85&w=2000 2000w,https://smartuploads.quarkly.io/65c28f65009abe001f02fdd6/images/Screenshot%202024-02-07%20at%202.43.51%20PM.png?v=2024-02-07T19%3A44%3A48.960Z&quality=85&w=2600 2600w,https://smartuploads.quarkly.io/65c28f65009abe001f02fdd6/images/Screenshot%202024-02-07%20at%202.43.51%20PM.png?v=2024-02-07T19%3A44%3A48.960Z&quality=85&w=3200 3200w"
 					sizes="(max-width: 479px) 100vw,(max-width: 767px) 100vw,(max-width: 991px) 100vw,(max-width: 1199px) 100vw,100vw"
 				/>
 			</Section>
-			<Section background="#f71414">
-				<Override slot="SectionContent" margin="50% 28.7969px 0px 28.7969px" />
-				<Text margin="0px 0px 0px 0px" font="72px --fontFamily-googleMaterialSymbolsOutlined" opacity="0.5">
+			<Section background="#f71414" sm-padding="0 0 0 0" sm-text-align="center">
+				<Override slot="SectionContent" margin="50% 28.7969px 0px 28.7969px" sm-margin="0 28.7969px 0px 28.7969px" />
+				<Text margin="0px 0px 0px 0px" font="72px --fontFamily-googleMaterialSymbolsOutlined" opacity="0.5" sm-font="45px --fontFamily-googleMaterialSymbolsOutlined">
 					BrainyYJars
 				</Text>
 				<Text
@@ -97,11 +114,26 @@ export default (() => {
 				hover-background="#f71414 url(https://uploads.quarkly.io/65c28f65009abe001f02fdd6/images/ninth.png?v=2024-02-06T21:56:51.809Z) 50% 50% /contain repeat-y scroll padding-box"
 				hover-mix-blend-mode="hue"
 			/>
-			<Override slot="image1" src="https://uploads.quarkly.io/65c28f65009abe001f02fdd6/images/sixth.png?v=2024-02-06T21:56:51.813Z" hover-opacity="." hover-mix-blend-mode="hue" />
-			<Override slot="image" hover-mix-blend-mode="hue" />
+			<Override
+				slot="image1"
+				src="https://uploads.quarkly.io/65c28f65009abe001f02fdd6/images/sixth.png?v=2024-02-06T21:56:51.813Z"
+				hover-opacity="."
+				hover-mix-blend-mode="hue"
+				sm-width="250px"
+				sm-margin="0px 0px 0px 15%"
+			/>
+			<Override
+				slot="image"
+				hover-mix-blend-mode="hue"
+				sm-height="250px"
+				sm-width="250px"
+				sm-margin="0px 0px 0px 20%"
+			/>
 			<Override slot="text2">
 				We are a collective of innovators dedicated to unlocking the potential of tomorrow's investors. Our mission leverages NFTs as keys to a world of knowledge, offering users the opportunity to deepen their understanding of cryptocurrencies, NFTsand beyond. By engaging with our platform, members not only gain invaluable insights but also earn cryptocurrency rewards. Embark with us on a path where knowledge and growth go hand-in-hand, transforming the way you build wealth.
 			</Override>
+			<Override slot="box1" sm-margin="0px 5% 0px 5%" />
+			<Override slot="box3" sm-margin="0 0 0px 0px" />
 		</Components.Info>
 		<Section>
 			<Override slot="SectionContent" font="30px --fontFamily-googleAnton" />
@@ -149,8 +181,8 @@ export default (() => {
 				</Box>
 			</Box>
 			<Box min-width="100px" min-height="100px" background="rgba(43, 231, 140, 0)" width="50%">
-				<Box min-width="100px" min-height="100px" />
-				<Box min-width="100px" min-height="100px" />
+				<Box min-width="100px" min-height="100px" sm-display="none" />
+				<Box min-width="100px" min-height="100px" sm-display="none" />
 				<Box min-width="100px" min-height="100px">
 					<Icon category="gi" icon={GiTakeMyMoney} size="64px" margin="0px 0px 0px 50%" />
 					<Text margin="0px 0px 0px 0px" font="25px --fontFamily-googleAnton" text-align="right">
@@ -161,13 +193,19 @@ export default (() => {
 					</Text>
 				</Box>
 				<Box min-width="100px" min-height="100px" />
-				<Box min-width="100px" min-height="100px">
-					<Icon category="gi" icon={GiCalendar} size="64px" margin="0px 0px 0px 50%" />
+				<Box min-width="100px" min-height="100px" sm-margin="80% 0px 0px 0px">
+					<Icon
+						category="gi"
+						icon={GiCalendar}
+						size="64px"
+						margin="0px 0px 0px 50%"
+						sm-margin="0px 0px 0px 30%"
+					/>
 					<Text margin="0px 0px 0px 0px" />
-					<Text margin="0px 0px 0px 0px" font="25px --fontFamily-googleAnton" text-align="right">
+					<Text margin="0px 0px 0px 0px" font="25px --fontFamily-googleAnton" text-align="right" sm-text-align="center">
 						Consolidated Platform for Upcoming Projects
 					</Text>
-					<Text margin="0px 0px 0px 0px" text-align="justify">
+					<Text margin="0px 0px 0px 0px" text-align="justify" sm-font="20px --fontFamily-googleOswald">
 						Access a centralized hub for discovering and learning about upcoming blockchain projects, allowing you to get in early and seize opportunities before they become mainstream.
 					</Text>
 				</Box>
@@ -468,7 +506,22 @@ export default (() => {
 				</Box>
 			</Box>
 		</Section>
-		<Components.Social />
+		<Components.Social>
+			<Override
+				slot="box"
+				sm-align-items="stretch"
+				sm-justify-items="center"
+				sm-align-content="end"
+				sm-justify-content="end"
+			/>
+			<Override
+				slot="socialMedia"
+				sm-justify-self="start"
+				sm-align-self="end"
+				sm-align-items="flex-end"
+				sm-margin="0px 0px 0px 50%"
+			/>
+		</Components.Social>
 		<RawHtml>
 			<script place={"endOfHead"} rawKey={"65caaca2aced8fcc8306120d"} />
 			<script place={"endOfHead"} rawKey={"65cbefb9de221655450c727f"}>

@@ -43,6 +43,7 @@ export default (() => {
 				md-height="420px"
 				md-padding="0px 24px 0px 24px"
 				position="static"
+				sm-height="100%"
 			/>
 			<Image
 				src="https://uploads.quarkly.io/65c28f65009abe001f02fdd6/images/NFT-BRAIN-F_copy-removebg-preview.png?v=2024-02-06T20:06:36.102Z"
@@ -54,6 +55,8 @@ export default (() => {
 				width="770.7740375976563px"
 				opacity=".25"
 				z-index="1"
+				sm-width="10p"
+				sm-height="50%"
 				srcSet="https://smartuploads.quarkly.io/65c28f65009abe001f02fdd6/images/NFT-BRAIN-F_copy-removebg-preview.png?v=2024-02-06T20%3A06%3A36.102Z&quality=85&w=500 500w,https://smartuploads.quarkly.io/65c28f65009abe001f02fdd6/images/NFT-BRAIN-F_copy-removebg-preview.png?v=2024-02-06T20%3A06%3A36.102Z&quality=85&w=800 800w,https://smartuploads.quarkly.io/65c28f65009abe001f02fdd6/images/NFT-BRAIN-F_copy-removebg-preview.png?v=2024-02-06T20%3A06%3A36.102Z&quality=85&w=1080 1080w,https://smartuploads.quarkly.io/65c28f65009abe001f02fdd6/images/NFT-BRAIN-F_copy-removebg-preview.png?v=2024-02-06T20%3A06%3A36.102Z&quality=85&w=1600 1600w,https://smartuploads.quarkly.io/65c28f65009abe001f02fdd6/images/NFT-BRAIN-F_copy-removebg-preview.png?v=2024-02-06T20%3A06%3A36.102Z&quality=85&w=2000 2000w,https://smartuploads.quarkly.io/65c28f65009abe001f02fdd6/images/NFT-BRAIN-F_copy-removebg-preview.png?v=2024-02-06T20%3A06%3A36.102Z&quality=85&w=2600 2600w,https://smartuploads.quarkly.io/65c28f65009abe001f02fdd6/images/NFT-BRAIN-F_copy-removebg-preview.png?v=2024-02-06T20%3A06%3A36.102Z&quality=85&w=3200 3200w"
 				sizes="(max-width: 479px) 100vw,(max-width: 767px) 100vw,(max-width: 991px) 100vw,(max-width: 1199px) 100vw,100vw"
 			/>
